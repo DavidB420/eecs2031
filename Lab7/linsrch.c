@@ -28,9 +28,9 @@ int linsrch(linptr lin, char *s, double *vp)
 {
 	for (int i = 0; i < lin->elmn; i++)
 	{
-		if (lin->data[i].val == *vp)
+		if (strcmp(s, lin->data[i].name) == 0)
 		{
-			if (strcmp(s, lin->data[i].name) == 0)
+				*vp = lin->data[i].val;
 				return i;
 		}
 	}
